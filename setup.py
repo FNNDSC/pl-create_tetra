@@ -1,4 +1,8 @@
 from setuptools import setup
+import shutil
+
+if not shutil.which('create_tetra'):
+    raise Exception('create_tetra command not found')
 
 setup(
     name='create_tetra',
